@@ -16,7 +16,7 @@ def usunCache():
 
 print('''Czy na pewno chcesz usunąć cache?
       \n---------------------------------
-      \nWyłączy to także Fivema oraz Steama
+      \nWyłączy to Fivema oraz Steama
 ''')
 time.sleep(1)
 x = input('[tak/nie]: ')
@@ -25,7 +25,8 @@ if x == 'tak':
     wylaczFivem()    # Wylaczanie Steama i Fivema
     usunCache()     # Usuwanie folderu Cache
     time.sleep(2)
-    sys.exit('Usunięty!')
+    print('Usunięty!')
+    sys.exit('Naciśnij Enter, aby wyjść!')
 
 else:
-    sys.exit('Nieudane!')
+    sys.exit('Naciśnij Enter, aby wyjść!')
