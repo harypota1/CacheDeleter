@@ -1,32 +1,29 @@
 import os
-import time
 import shutil
 import sys
 
-# Discord: harypota#3867
-
-def wylaczFivem():
+def offFivem():
     os.system('TASKKILL /F /IM Steam.exe')
     os.system('TASKKILL /F /IM Fivem.exe')
 
-def usunCache():
-    print('Usuwanie folderu cache...')
-    time.sleep(3)
+def delCache():
     shutil.rmtree(r'C:\Users\User\AppData\Local\FiveM\FiveM.app\cache', ignore_errors=True) # Wpisz swoją sciezke do cache (User)
 
-print('''Czy na pewno chcesz usunąć cache?
-      \n---------------------------------
-      \nWyłączy to Fivema oraz Steama
+print('''
+ ,--.         .         .-,--.      .      .          
+| `-' ,-. ,-. |-. ,-.   ' |   \ ,-. |  ,-. |- ,-. ,-. 
+|   . ,-| |   | | |-'   , |   / |-' |  |-' |  |-' |   
+`--'  `-^ `-' ' ' `-'   `-^--'  `-' `' `-' `' `-' '  
 ''')
-time.sleep(1)
-x = input('[tak/nie]: ')
 
-if x == 'tak':
-    wylaczFivem()    # Wylaczanie Steama i Fivema
-    usunCache()     # Usuwanie folderu Cache
-    time.sleep(2)
+print('Chcesz usunąć Cache? (pamięć podręczną fivema)')
+
+odp = input('[tak/nie]: ')
+
+if odp == 'tak':
+    offFivem()
+    delCache()
     print('Usunięty!')
-    sys.exit('Naciśnij Enter, aby wyjść!')
-
+    sys.exit('Naciśnij Enter aby wyjść!')
 else:
-    sys.exit('Naciśnij Enter, aby wyjść!')
+    sys.exit('Naciśnij Enter aby wyjść!')
