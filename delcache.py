@@ -16,7 +16,7 @@ print('''
 `--'  `-^ `-' ' ' `-'   `-^--'  `-' `' `-' `' `-' '  
 ''')
 
-print('Chcesz usunąć Cache? (pamięć podręczną fivema)')
+print('Chcesz usunąć Cache?')
 
 odp = input('[tak/nie]: ')
 
